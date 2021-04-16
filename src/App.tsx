@@ -1,13 +1,18 @@
-import './App.css';
+import React from 'react';
+import Navbar from './components/layouts/Navbar';
+import Page from './components/layouts/Page';
 import { GlobalStyle } from './global/GlobalStyle'
 
 function App() {
   return (
     <>
-    <GlobalStyle />
-    <div className="App">
-      <p>All rooms at Hotel The Craftsmen vary in size, facilities, design, antiques and Dutch historical crafts. Let's see which room is perfect for you! All room rates include breakfast.</p>
-    </div>
+      <GlobalStyle />
+      <div className="App">
+        <Navbar />
+        <Page>
+          
+        </Page>
+      </div>
     </>
   );
 }
