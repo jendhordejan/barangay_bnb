@@ -1,6 +1,7 @@
 import React from 'react';
-import Navbar from './components/layouts/Navbar';
-import Page from './components/layouts/Page';
+import Header from './components/layouts/Header/Index';
+import Navbar from './components/layouts/Navbar/Index';
+import Page from './components/layouts/Page/Index';
 import { GlobalStyle } from './global/GlobalStyle'
 
 function App() {
@@ -8,9 +9,11 @@ function App() {
     <>
       <GlobalStyle />
       <div className="App">
-        <Navbar />
+        <Header>
+          <Navbar />
+        </Header>
         <Page>
-          
+          This is the page
         </Page>
       </div>
     </>

@@ -9,8 +9,6 @@ export const GlobalStyle = createGlobalStyle`
     body {
       font-family: 'Antic Didone', serif;
       color: #2b3a44;
-      
-      opacity: 0.8;
       height: 100%;
     }
 `
