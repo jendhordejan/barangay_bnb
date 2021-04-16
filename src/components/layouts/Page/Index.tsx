@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 
 const StyledPage = styled.div`
@@ -10,11 +10,7 @@ const StyledPage = styled.div`
   background: linear-gradient( to left, #ffffff 50%, rgba(230, 237, 238, 0.377) 50%);
 `
 
-interface Properties {
-  children: ReactNode
-}
-
-const Page: FC<Properties> = ({ children }) => {
+const Page: FC = ({ children }) => {
   return (
     <StyledPage>
       {children}
