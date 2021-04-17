@@ -1,4 +1,6 @@
+import React from 'react';
 import styled from 'styled-components';
+import { Button } from './components/Index';
 import Header from './components/layouts/Header/Index';
 import Navbar from './components/layouts/Navbar/Index';
 import Page from './components/layouts/Page/Index';
@@ -24,7 +26,7 @@ function App() {
         </Header>
         <Page>
           <TestContainer>
-
+            <Button direction={'left'}>Book Now</Button>
           </TestContainer>
         </Page>
       </div>
