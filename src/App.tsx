@@ -1,9 +1,18 @@
-import React from 'react';
+import styled from 'styled-components';
 import Header from './components/layouts/Header/Index';
-import { List, ListItem } from './components/layouts/Index';
 import Navbar from './components/layouts/Navbar/Index';
 import Page from './components/layouts/Page/Index';
 import { GlobalStyle } from './global/GlobalStyle'
+
+const TestContainer = styled.div`
+  height: 100px;
+  width: 100%;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+  background-image: linear-gradient(-25deg, #616161 0%, #96B7C4 100%);
+`
 
 function App() {
   return (
@@ -14,14 +23,9 @@ function App() {
           <Navbar />
         </Header>
         <Page>
-          <List>
-            <ListItem fontSize={'30px'}>In-room secured Wi-Fi</ListItem>
-            <ListItem fontSize={'30px'}>Nespresso Coffee</ListItem>
-            <ListItem fontSize={'30px'}>Nilson Beds</ListItem>
-            <ListItem fontSize={'30px'}>Bathrobe and Slippers</ListItem>
-            <ListItem fontSize={'30px'}>Complimentary Still and Sparkling Water</ListItem>
-            <ListItem fontSize={'30px'}>Complimentary Breakfast</ListItem>
-          </List>            
+          <TestContainer>
+
+          </TestContainer>
         </Page>
       </div>
     </>

@@ -1,12 +1,11 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { List, ListItem} from '../Index'
+import { List, ListItem } from '../../Index'
 
 const NavbarWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  
 `
 
 const Navbar: FC = () => {
