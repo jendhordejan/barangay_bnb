@@ -4,6 +4,7 @@ import { Button } from './components/Index';
 import Header from './components/layouts/Header/Index';
 import Navbar from './components/layouts/Navbar/Index';
 import Page from './components/layouts/Page/Index';
+import { bgImg, palette } from './global/constants/theme';
 import { GlobalStyle } from './global/GlobalStyle'
 
 const TestContainer = styled.div`
@@ -12,8 +13,8 @@ const TestContainer = styled.div`
   display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-  background-image: linear-gradient(-25deg, #616161 0%, #96B7C4 100%);
+	flex-direction: row;
+  background-image: ${bgImg.primary};
 `
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         </Header>
         <Page>
           <TestContainer>
+            <Button direction={'left'} bgcolor={palette.secondary} bgcolortransition={palette.primary} fontcolor={palette.primary} fontcolorhover={palette.secondary}>Information</Button>
             <Button direction={'left'}>Book Now</Button>
           </TestContainer>
         </Page>

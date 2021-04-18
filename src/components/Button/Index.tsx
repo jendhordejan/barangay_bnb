@@ -1,22 +1,27 @@
 import React, { ButtonHTMLAttributes, FC } from 'react'
 import styled from 'styled-components'
+import { font } from '../../global/constants/theme'
 
 interface ISlideButton {
   direction: string
+  bgcolor: string
+  bgcolortransition: string
+  fontcolor: string
+  fontcolorhover: string
 }
 const SlideButton = styled.button<ISlideButton>`
   background-color: var(--background-color);
-  font-family: 'Antic Didone', serif;
+  font-family: ${font.family.primary};
   font-size: 20px;
-  color: white;
+  color: ${(p)=>p.fontcolor};
   padding: 14px 18px;
   border: solid 1px;
   outline: none;
   position: relative;
   cursor: pointer;
 
-  --background-color: #2b3a44;
-  --accent-color: white;
+  --background-color: ${(p)=>p.bgcolor};
+  --accent-color: ${(p)=>p.bgcolortransition};
 
   ::before{
     content: '';
@@ -42,22 +47,27 @@ const SlideButton = styled.button<ISlideButton>`
   z-index: 1;
 
   :hover, :focus {
-    color: #2b3a44;
+    color: ${(p)=>p.fontcolorhover};
   } 
 `
 
 interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
-  direction: string
+  direction: 'center' | 'right' | 'left'
+  bgcolor?: string
+  bgcolortransition?: string
+  fontcolor?: string
+  fontcolorhover?: string
 }
 
-const Button: FC<IButton>= ({children, direction = 'left'}) => {
+const Button: FC<IButton>= ({children, direction = 'left', bgcolor = '#2b3a44', bgcolortransition='white', fontcolor= 'white', fontcolorhover='#2b3a44' }) => {
 
   console.log(direction)
   return (
-    <SlideButton direction={direction}>
+    <SlideButton direction={direction} bgcolor={bgcolor} bgcolortransition={bgcolortransition} fontcolor={fontcolor} fontcolorhover={fontcolorhover}>
       {children}
     </SlideButton>
   )
 }
+
 
 export default Button
