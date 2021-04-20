@@ -6,7 +6,7 @@ const StyledPage = styled.div`
   height: 100%;
   overflow: hidden;
   margin: 0;
-  padding-top: 70px;
+  padding: 70px 30px 0;
   background: linear-gradient( to left, #ffffff 50%, rgba(230, 237, 238, 0.377) 50%);
 `
 

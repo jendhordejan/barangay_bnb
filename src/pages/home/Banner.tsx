@@ -1,11 +1,13 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import styled from 'styled-components';
+import { List, ListItem } from '../../components/Index';
 import mainImage from "../../images/main.jpg";
 
 const BannerWrapper = styled.div`
     height: calc(100vh - 160px);
     min-height: 288px;
-    margin: 30px;
+    margin-top: 30px;
+    margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
     position: relative;
@@ -35,11 +37,31 @@ const BannerWrapper = styled.div`
     }
 `
 
+const ContactInfo = styled.div`
+
+`
+
 const Banner: FC = () => {
+  const [hotelInfo] = useState({
+    phone: '+31 (0) 625 045 432',
+    email: 'rooms@barangay.nl'
+  })
+
+  const {phone, email} = hotelInfo
   return (
-    <BannerWrapper>
-      <img src={mainImage} alt='mainImage' />
-    </BannerWrapper>
+    <div>
+      <BannerWrapper>
+        <img src={mainImage} alt='mainImage' />
+      </BannerWrapper>
+      <div>
+        <div>
+          <List>
+            <ListItem><strong>T:</strong>{phone}</ListItem>
+            <ListItem><strong>E:</strong>{email}</ListItem>
+          </List>
+        </div>
+      </div>
+    </div>
   )
 }
 
