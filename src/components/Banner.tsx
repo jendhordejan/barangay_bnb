@@ -2,14 +2,14 @@ import React, { FC, useState } from 'react'
 import styled from 'styled-components';
 import { List, ListItem } from './Index';
 import mainImage from "../images/main.jpg";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"
+import Icon from './Icon';
+import { palette } from '../global/constants/theme';
 
-const BannerWrapper = styled.div`
+const BannerImageWrapper = styled.div`
     height: calc(100vh - 160px);
     min-height: 288px;
     margin-top: 30px;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
     position: relative;
 
     img {
@@ -37,6 +37,20 @@ const BannerWrapper = styled.div`
     }
 `
 
+const BannerBottom = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+`
+
+const IconWrapper = styled.div`
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+  width: 40%;
+`
+
 const Banner: FC = () => {
   const [hotelInfo] = useState({
     phone: '+31 (0) 625 045 432',
@@ -46,17 +60,22 @@ const Banner: FC = () => {
   const {phone, email} = hotelInfo
   return (
     <div>
-      <BannerWrapper>
+      <BannerImageWrapper>
         <img src={mainImage} alt='mainImage' />
-      </BannerWrapper>
-      <div>
+      </BannerImageWrapper>
+      <BannerBottom>
         <div>
           <List>
-            <ListItem><strong>T:</strong>{phone}</ListItem>
-            <ListItem><strong>E:</strong>{email}</ListItem>
+            <ListItem fontSize={'14'}>`Telephone: {phone}`</ListItem>
+            <ListItem fontSize={'14'} hidebullet={true}>`Email: {email}`</ListItem>
           </List>
         </div>
-      </div>
+        <IconWrapper>
+          <a target='_blank' rel='noopener' href='https://www.facebook.com/tropicalrooms/'>
+            <Icon fontSize={24} color={palette.primary} icon={faFacebook}/>
+          </a>
+        </IconWrapper>
+      </BannerBottom>
     </div>
   )
 }

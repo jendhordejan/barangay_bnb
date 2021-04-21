@@ -9,15 +9,45 @@ const NavbarWrapper = styled.div`
 `
 
 const Navbar: FC = () => {
+  const navLinks = [
+    {
+      name: 'Home',
+      url: '#home'
+    },
+    {
+      name: 'Room',
+      url: '#room'
+    },
+    {
+      name: 'Tips',
+      url: '#tips'
+    },
+    {
+      name: 'About',
+      url: '#about'
+    },
+    {
+      name: 'Contact',
+      url: '#contact'
+    },
+  ]
+
+  const totalLinks = navLinks.length -1
+
   return (
     <>
       <NavbarWrapper>
         <List>
-          <ListItem><a href="#home">Home</a></ListItem>
-          <ListItem><a href="#room">Room</a></ListItem>
-          <ListItem><a href="#tips">Good to Know</a></ListItem>
-          <ListItem><a href="#about">About</a></ListItem>
-          <ListItem><a href="#contact">Contact</a></ListItem>
+          {navLinks.map((navItem, index) => {
+
+            const {name, url} = navItem
+            
+            if (totalLinks === index) {
+              return <ListItem hidebullet={true}><a href={url}>{name}</a></ListItem>
+            }
+
+            return <ListItem><a href={url}>{name}</a></ListItem>
+          })}
         </List>
       </NavbarWrapper>
     </>
