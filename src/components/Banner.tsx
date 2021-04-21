@@ -71,7 +71,7 @@ const Banner: FC = () => {
           </List>
         </div>
         <IconWrapper>
-          <a target='_blank' rel='noopener' href='https://www.facebook.com/tropicalrooms/'>
+          <a target='_blank'  rel="noreferrer" href='https://www.facebook.com/tropicalrooms/'>
             <Icon fontSize={24} color={palette.primary} icon={faFacebook}/>
           </a>
         </IconWrapper>
