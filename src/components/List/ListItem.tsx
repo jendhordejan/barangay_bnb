@@ -7,16 +7,16 @@ interface IStyledLi {
 }
 const StyledLi = styled.li<IStyledLi>`
   position: relative;
-  padding: 0 ${(p)=>p.fontSize ? p.fontSize :  '24px'};
-  margin: 0 0 ${(p)=>p.mb && p.mb}px;
+  padding: 0 2.5rem;
+  margin-bottom: ${(p)=>p.mb && p.mb}px;
 
-  font-size: ${(p)=>p.fontSize ? p.fontSize :  '16px'};
+  font-size: ${(p)=>p.fontSize ? p.fontSize :  '16'}px;
   line-height: 24px;
 
   /** styling for diamond shape bullet */
   ::before { 
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     position: absolute;
     right: 0;
     -webkit-transform: rotate(45deg);
@@ -34,12 +34,30 @@ const StyledLi = styled.li<IStyledLi>`
     text-decoration: none;
   }
 `
+
+const NoBulletLi = styled.li<IStyledLi>`
+  position: relative;
+  padding: 0 2.5rem;
+  margin-bottom: ${(p)=>p.mb && p.mb}px;
+
+  font-size: ${(p)=>p.fontSize ? p.fontSize :  '16px'};
+  line-height: 24px;
+
+  a {
+    color: #2B3A44;
+    text-align: center;
+    
+    text-decoration: none;
+  }
+`
+
 interface IListItem extends InputHTMLAttributes<HTMLLIElement> {
   fontSize?: string
   mb?: number
+  hidebullet?: boolean
 }
-const ListItem: FC<IListItem> = ({children, fontSize='16px', mb=0, ...props}) => {
-  return <StyledLi fontSize={fontSize} mb={mb} {...props}>{children}</StyledLi>
+const ListItem: FC<IListItem> = ({children, fontSize='16px', mb=0, hidebullet=false, ...props}) => {
+ return hidebullet ? <NoBulletLi fontSize={fontSize} mb={mb} {...props}>{children}</NoBulletLi> :  <StyledLi fontSize={fontSize} mb={mb} {...props}>{children}</StyledLi>
 }
 
 export default ListItem
