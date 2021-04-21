@@ -32,13 +32,15 @@ const ButtonWrapper = styled.div`
 `
 
 const Header: FC = () => {
+  const bookingLink = 'https://reservations.cubilis.eu/bbbarangay-amsterdam?Language=en-GB'
+  
   return (
     <Main>
       <HeaderWrapper>
         <Navbar />
       </HeaderWrapper>
       <ButtonWrapper>
-        <Button direction={'right'}>Book Now</Button>
+        <Button direction={'right'} onClick={()=>{window.location.replace(bookingLink)}}>Book Now</Button>
       </ButtonWrapper>
     </Main>
   )

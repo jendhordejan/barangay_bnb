@@ -60,10 +60,10 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   fontcolorhover?: string
 }
 
-const Button: FC<IButton>= ({children, direction = 'left', bgcolor = '#2b3a44', bgcolortransition='white', fontcolor= 'white', fontcolorhover='#2b3a44' }) => {
+const Button: FC<IButton>= ({children, direction = 'left', bgcolor = '#2b3a44', bgcolortransition='white', fontcolor= 'white', fontcolorhover='#2b3a44', ...props }) => {
 
   return (
-    <SlideButton direction={direction} bgcolor={bgcolor} bgcolortransition={bgcolortransition} fontcolor={fontcolor} fontcolorhover={fontcolorhover}>
+    <SlideButton direction={direction} bgcolor={bgcolor} bgcolortransition={bgcolortransition} fontcolor={fontcolor} fontcolorhover={fontcolorhover} {...props}>
       {children}
     </SlideButton>
   )
