@@ -10,15 +10,17 @@ const NavbarWrapper = styled.div`
 
 const Navbar: FC = () => {
   return (
-    <NavbarWrapper>
-      <List>
-        <ListItem><a href="#home">Home</a></ListItem>
-        <ListItem><a href="#room">Room</a></ListItem>
-        <ListItem><a href="#tips">Good to Know</a></ListItem>
-        <ListItem><a href="#about">About</a></ListItem>
-        <ListItem><a href="#contact">Contact</a></ListItem>
-      </List>
-    </NavbarWrapper>
+    <>
+      <NavbarWrapper>
+        <List>
+          <ListItem><a href="#home">Home</a></ListItem>
+          <ListItem><a href="#room">Room</a></ListItem>
+          <ListItem><a href="#tips">Good to Know</a></ListItem>
+          <ListItem><a href="#about">About</a></ListItem>
+          <ListItem><a href="#contact">Contact</a></ListItem>
+        </List>
+      </NavbarWrapper>
+    </>
   )
 }
 

@@ -1,13 +1,21 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
+import { Button } from '../../Index'
+import Navbar from '../Navbar/Index'
+
+const Main = styled.div`
+  position: absolute;
+  display: flex;
+  width: 100%;
+  max-height: 65px;
+`
 
 const HeaderWrapper = styled.div`
-  position: absolute;
   top: 0;
   left: 0;
 
-  height: 70px;
-  width: 100%;
+  height: 65px;
+  width: calc(100% - 80px);
   padding-left: 16px;
 
   border-bottom: solid 1px #2B3A44;
@@ -17,11 +25,22 @@ const HeaderWrapper = styled.div`
   justify-content: space-between;
 `
 
-const Header: FC = ({children}) => {
+const ButtonWrapper = styled.div`
+  width: 180px;
+  padding: 4px;
+  border: 1px solid;
+`
+
+const Header: FC = () => {
   return (
-    <HeaderWrapper>
-      {children}
-    </HeaderWrapper>
+    <Main>
+      <HeaderWrapper>
+        <Navbar />
+      </HeaderWrapper>
+      <ButtonWrapper>
+        <Button direction={'right'}>Book Now</Button>
+      </ButtonWrapper>
+    </Main>
   )
 }
 

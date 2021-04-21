@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react'
 import styled from 'styled-components';
-import { List, ListItem } from '../../components/Index';
-import mainImage from "../../images/main.jpg";
+import { List, ListItem } from './Index';
+import mainImage from "../images/main.jpg";
 
 const BannerWrapper = styled.div`
     height: calc(100vh - 160px);
@@ -35,10 +35,6 @@ const BannerWrapper = styled.div`
       right: 48px;
       bottom: 48px;
     }
-`
-
-const ContactInfo = styled.div`
-
 `
 
 const Banner: FC = () => {
