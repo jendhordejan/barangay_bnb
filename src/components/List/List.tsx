@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const StyledUl = styled.ul`
     list-style: none;
     display: flex;
-    margin-left: unset;
+    padding-left: unset;
 `
 
 const List: FC = ({children}) => {
