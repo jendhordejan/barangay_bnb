@@ -15,6 +15,7 @@ const SlideButton = styled.button<ISlideButton>`
   font-size: 20px;
   color: ${(p)=>p.fontcolor};
   padding: 14px 18px;
+  width: 100%;
   border: solid 1px;
   outline: none;
   position: relative;
@@ -61,7 +62,6 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button: FC<IButton>= ({children, direction = 'left', bgcolor = '#2b3a44', bgcolortransition='white', fontcolor= 'white', fontcolorhover='#2b3a44' }) => {
 
-  console.log(direction)
   return (
     <SlideButton direction={direction} bgcolor={bgcolor} bgcolortransition={bgcolortransition} fontcolor={fontcolor} fontcolorhover={fontcolorhover}>
       {children}
