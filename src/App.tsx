@@ -8,8 +8,9 @@ function App() {
     <>
       <GlobalStyle />
       <div className="App">
-        <Header />
-        <Home />
+        Slider
+        {/* <Header />
+        <Home /> */}
       </div>
     </>
   );
