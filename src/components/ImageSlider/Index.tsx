@@ -5,8 +5,8 @@ import styled from 'styled-components'
 interface Properties {}
 
 
-const Component: FC<Properties> = () => {
-  return <div></div>
+const ImageSlider: FC<Properties> = () => {
+  return <div>Image</div>
 }
 
-export default Component
+export default ImageSlider
