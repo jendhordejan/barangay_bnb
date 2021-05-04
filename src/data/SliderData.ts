@@ -12,11 +12,12 @@ export const SliderData = [
     image: 'https://images.unsplash.com/photo-1612361808300-da9583e1b34e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=671&q=80'
   },
   {
-    location: 'Italy',
-    image: 'https://images.unsplash.com/photo-1612361808300-da9583e1b34e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=671&q=80'
-  },  
-  {
     location: 'Singapore',
     image: 'https://images.unsplash.com/photo-1616641610600-3a0bed113425?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=661&q=80'
   },  
 ]
+
+export interface ISliderData {
+  location: string
+  image: string
+}
