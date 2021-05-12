@@ -23,6 +23,10 @@ const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 600px) {
+    width: unset;
+  }
 `
 
 const ButtonWrapper = styled.div`
