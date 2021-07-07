@@ -13,7 +13,7 @@ function App() {
 
         <Header />
         <Home />
-        {/* <ImageSlider slides={SliderData}/> */}
+        <ImageSlider slides={SliderData}/>
       </div>
     </>
   );

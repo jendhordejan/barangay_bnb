@@ -4,7 +4,7 @@ import { ISliderData } from '../../data/SliderData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft ,faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-const Slider = styled.section`
+const Slider = styled.div`
   position: relative;
   height: 100vh;
   display: flex;
@@ -13,7 +13,7 @@ const Slider = styled.section`
 `
 
 const Image = styled.img`
-  width: 1000px;
+  width: 100%;
   height: 600px;
   border-radius: 10px;
 `
@@ -41,6 +41,7 @@ const RightArrow = styled(FontAwesomeIcon)`
 `
 
 const ActiveSlide = styled.div`
+  max-width: 800px;
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
@@ -48,7 +49,7 @@ const ActiveSlide = styled.div`
 
 const Slide = styled.div`
   opacity: 0.5;
-  transition-duration: 1s ease;
+  transition-duration: 2s ease;
 `
 
 interface Properties {
@@ -79,11 +80,11 @@ const ImageSlider: FC<Properties> = ({slides}) => {
         return (
           (index === currentIndex) ? (
             <ActiveSlide key={index}>
-              {index === currentIndex && <Image src={slide.image} alt='travel image' key={index}/>}
+              {index === currentIndex && <Image src={slide.image} alt='slider image' key={index}/>}
             </ActiveSlide>
           ) : (
             <Slide key={index}>
-              {index === currentIndex && <Image src={slide.image} alt='travel image' key={index}/>}
+              {index === currentIndex && <Image src={slide.image} alt='slider image' key={index-1}/>}
             </Slide>
           )
         )

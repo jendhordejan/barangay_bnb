@@ -1,23 +1,53 @@
+import slide1 from '../images/room1_main.jpeg'
+import slide2 from '../images/room1_1.jpeg'
+import slide3 from '../images/room1_2.jpeg' 
+import slide4 from '../images/room1_3.jpeg'
+import slide5 from '../images/room2_main.jpg'
+import slide6 from '../images/room2_2.jpg'
+import slide7 from '../images/room2_3.jpg'
+import slide8 from '../images/room2_4.jpg'
+import slide9 from '../images/room2_4.jpg'
+
 export const SliderData = [
   {
-    location: 'San Francisco',
-    image: 'https://images.unsplash.com/photo-1576457412633-c6a0ded8b643?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDF8RnpvM3p1T0hONnd8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    description: 'slide1',
+    image: slide1
   },
   {
-    location: 'France',
-    image: 'https://images.unsplash.com/photo-1609971757431-439cf7b4141b?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8RnpvM3p1T0hONnd8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    description: 'slide2',
+    image: slide2
   },  
   {
-    location: 'Italy',
-    image: 'https://images.unsplash.com/photo-1612361808300-da9583e1b34e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=671&q=80'
+    description: 'slide3',
+    image: slide3
+  },  
+  {
+    description: 'slide4',
+    image: slide4
+  },  
+  {
+    description: 'slide5',
+    image: slide5
+  },  
+  {
+    description: 'slide6',
+    image: slide6
   },
   {
-    location: 'Singapore',
-    image: 'https://images.unsplash.com/photo-1616641610600-3a0bed113425?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=661&q=80'
+    description: 'slide7',
+    image: slide7
+  },    
+  {
+    description: 'slide8',
+    image: slide8
+  },    
+  {
+    description: 'slide9',
+    image: slide9
   },  
 ]
 
 export interface ISliderData {
-  location: string
+  description: string
   image: string
 }
