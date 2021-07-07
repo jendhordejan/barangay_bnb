@@ -61,10 +61,12 @@ const ImageSlider: FC<Properties> = ({slides}) => {
   const length = slides.length
 
   const showNextSlide = () => {
+    /** if the currentIndex is the last image then set currentIndex to point to the first image otherwise set currentIndex as the index of the next image  */
     setCurrentIndex(currentIndex === length-1 ? 0 : currentIndex + 1)
   }
 
   const showPrevSlide = () => {
+    /** if the currentIndex is the first image then set the currentIndex to point to the last image otherwise set currentIndex as the index of the previous image */
     setCurrentIndex(currentIndex === 0 ? length-1 : currentIndex - 1)
   }
 
@@ -80,11 +82,12 @@ const ImageSlider: FC<Properties> = ({slides}) => {
         return (
           (index === currentIndex) ? (
             <ActiveSlide key={index}>
-              {index === currentIndex && <Image src={slide.image} alt='slider image' key={index}/>}
+              {index === currentIndex && <Image src={slide.image} alt='active image' key={index}/>}
             </ActiveSlide>
           ) : (
+            /** in the future: it would be nice to show the previous and next photo using this slide component */
             <Slide key={index}>
-              {index === currentIndex && <Image src={slide.image} alt='slider image' key={index-1}/>}
+              {index === currentIndex && <Image src={slide.image} alt='inactive image' key={index-1}/>}
             </Slide>
           )
         )
