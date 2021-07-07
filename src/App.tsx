@@ -10,7 +10,6 @@ function App() {
     <>
       <GlobalStyle />
       <div className="App">
-
         <Header />
         <Home />
         <ImageSlider slides={SliderData}/>
