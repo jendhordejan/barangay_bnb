@@ -19,6 +19,7 @@ const StyledIcon = styled(FontAwesomeIcon)<IIcon>`
   font-size: ${p.fontSize}px;
   `}
 `
+
 export interface Properties {
   icon: IconDefinition
   fontSize?: number

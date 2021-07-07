@@ -10,6 +10,14 @@ const Main = styled.div`
   max-height: 65px;
 `
 
+const Name = styled.h1`
+  width: 180px;
+  height: 40px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  display: flex;
+  align-items: center;
+`
+
 const HeaderWrapper = styled.div`
   top: 0;
   left: 0;
@@ -23,6 +31,10 @@ const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 600px) {
+    width: unset;
+  }
 `
 
 const ButtonWrapper = styled.div`
@@ -31,12 +43,17 @@ const ButtonWrapper = styled.div`
   border: 1px solid;
 `
 
+const HotelName:FC = () => {
+  return <Name>Barangay B&amp;B</Name>
+}
+
 const Header: FC = () => {
   const bookingLink = 'https://reservations.cubilis.eu/bbbarangay-amsterdam?Language=en-GB'
   
   return (
     <Main>
       <HeaderWrapper>
+        <HotelName/>
         <Navbar />
       </HeaderWrapper>
       <ButtonWrapper>

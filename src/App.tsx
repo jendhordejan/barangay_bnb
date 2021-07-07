@@ -1,7 +1,9 @@
 import React from 'react';
+import ImageSlider from './components/ImageSlider/ImageSlider';
 import Header from './components/Layouts/Header/Index';
-import { GlobalStyle } from './global/GlobalStyle'
 import Home from './pages/home/Index';
+import { SliderData } from './data/SliderData';
+import { GlobalStyle } from './global/GlobalStyle'
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
       <div className="App">
         <Header />
         <Home />
+        <ImageSlider slides={SliderData}/>
       </div>
     </>
   );
